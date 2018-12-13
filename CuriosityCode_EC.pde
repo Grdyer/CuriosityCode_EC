@@ -1,71 +1,37 @@
 // Post your CuriosityCode_EC here. 
-size(500,500);
-background(0);
+int X=100;
+int Y=100;
+int bounce=1;
+void setup() 
+{
+  size(500,500);
+  //background(0);  
+}
+void draw()
+{
+  background(0);
+  fill(255,0,0);
+  rect(X,X,500,500);
+  X=X+bounce;
+  Y=Y+bounce;
+    //X=X+bounce;
+  if(X>width || X<0)
+  {bounce=bounce*(-1);}
+  fill(0,0,255);
+  rect(0,0,X,Y);
+ if(Y>height || Y<0);
+  Y=Y+bounce;
+  X=X+bounce;
+  stroke(255);
+line(X,Y,500,0);
+line(X,Y,0,500);
+line(X,Y,475,0);
+line(X,Y,0,475);
+line(X,Y,500,25);
+line(X,Y,25,500);
+fill(0);
+ellipse(X,Y,X-250,Y-250);
+ellipse(X,Y,X-275,Y-275);
+ellipse(X,Y,X-225,Y-225);
 
-stroke(255,200,0);
-line(250,0,0,500);
-line(180,140,200,500);
-line(186,230,380,500);
-line(280,360,500,430);
-line(370,388,500,350);
-line(420,374,500,230);
-line(440,339,500,0);
-line(460,220,400,0);
-line(440,150,280,0);
-line(361,76,205,90);
-line(300,81,185,200);
-
-stroke(255,0,196);
-line(250,134,230,290);
-
-line(243,199,325,373);
-
-line(280,275,428,360);
-
-line(320,298,446,300);
-
-line(350,298,456,250);
-
-line(400,274,430,142);
-
-line(410,225,340,79);
-
-line(390,185,280,103);
-
-line(343,150,250,135);
-
-line(300,144,260,233);
-
-stroke(255,3,3);
-line(281,187,299,286);
-
-line(287,215,350,298);
-
-line(310,245,380,284);
-
-line(350,267,404,255);
-
-stroke(3,249,235);
-line(365,263,410,229);
-
-line(379,252,389,185);
-
-line(382,225,335,150);
-
-line(363,195,287,173);
-
-stroke(255,205,3);
-line(335,188,286,210);
-
-line(315,197,305,239);
-
-noFill();
-arc(346,224,60,60,radians(0),radians(180));
-stroke(0,202,255);
-arc(346,224,50,50,radians(0),radians(180));
-arc(346,224,40,40,radians(0),radians(180));
-stroke(255,0,9);
-arc(346,224,30,30,radians(0),radians(180));
-arc(346,224,20,20,radians(0),radians(180));
-arc(346,224,10,10,radians(0),radians(180));
-arc(346,224,45,45,radians(180),radians(360));
+}
